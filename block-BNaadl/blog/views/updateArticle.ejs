@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="container padding flex" >
+        <a  href="/"> <button>Go To Home page</button> </a>
+        <a  href="/articles"> <button>list of Articles</button> </a>
+        <a  href="/articles/<%=articles.id%>"> <button>back to the each article</button> </a>
+    </header>
+    <section>
+        <div class="container form">
+    <form action="/articles/<%=articles.id%>" method="POST" >
+        <h2 ">Update the Form</h2> 
+        <input   type="text" name="title" value="<%= articles.title%>"> <br>
+        <input type="text" name="description" value="<%= articles.description%>"> <br>
+        <input  type="text" name="tags" value="<%= articles.tags%>"> <br>
+        <input type="text" name="author" value="<%= articles.author%>"> <br>
+        <input type="number" name="likes" value="<%= articles.likes%>"> <br>
+        <input  type="submit">
+        
+    </form>
+</div>
+</section>
+</body>
+</html>
