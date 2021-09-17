@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="container flex padding">
+      <a href="/"> <button>Go To Home page</button> </a>
+      <a href="/articles/new"> <button>Add New Article</button> </a>
+      <a href="/articles"> <button>list of articles</button> </a>
+    </header>
+    <section class="container parent">
+      <div  class="singleArticle">
+        <h2> Title : <%= articles.title%></h2>
+        <h3> Description : <%= articles.description%></h3>
+        <h4> Tags : <%= articles.tags%></h4>
+        <h5> Author : <%= articles.author%></h5>
+        <h6><%= articles.likes ? articles.likes : 0 %></h6>
+
+        <a href="/articles/<%=articles.id%>/likes">
+          <button >Like</button>
+        </a>
+
+        <a href="/articles/<%=articles.id%>/dislikes">
+          <button ">dislike</button>
+        </a>
+
+        <a href="/articles/<%=articles.id%>/edit">
+          <button ">Edit</button>
+        </a>
+
+        <a href="/articles/<%=articles.id%>/delete">
+          <button >delete</button>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
