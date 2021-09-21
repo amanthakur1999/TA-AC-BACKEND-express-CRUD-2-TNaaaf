@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex padding container">
+        <a href="/articles"> <button>List of All Articles</button> </a>
+        <a href="/"> <button>Back</button> </a>
+      </div>
+    </header>
+    <div class="container form">
+      <form action="/articles" method="POST">
+        <h2>Submit the Article</h2>
+        <input type="text" name="title" placeholder="Enter the Title" /><br />
+        <input type="text" name="author" placeholder="Enter the Author" /><br />
+        <textarea
+          name="description"
+          id=""
+          cols="30"
+          rows="6"
+          placeholder="Enter the Description of subject"
+        ></textarea
+        ><br />
+        <input type="number" name="likes" placeholder="How many Likes" /><br />
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
